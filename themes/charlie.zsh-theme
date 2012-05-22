@@ -1,6 +1,6 @@
 function precmd()
 {
-  HOST='%{$fg[cyan]%}$(whoami)@$(hostname -s)%{$reset_color%}'
+  HOST='%{$fg[blue]%}$(whoami)%{$fg[green]%}@%{$fg[blue]%}$(hostname -s)(%{$fg[yellow]%}$(date +%H:%M)%{$fg[blue]%})'
     DIR='%{$fg[red]%}%~%{$reset_color%}'
     RVM='%{$fg[yellow]%}$(rvm current)%{$reset_color%}'
 
@@ -13,7 +13,7 @@ function precmd()
 
     PROMPT="
 $HOST:$DIR$GIT
-%# "
+%{$fg[green]%}$ %{$reset_color%}"
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:"
