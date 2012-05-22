@@ -9,11 +9,11 @@ function precmd()
         GIT=' %{$reset_color%}[%{$fg[yellow]%}$(git_prompt_info)%{$reset_color%}]'
     else
       GIT=''
-        fi
+    fi
 
-        PROMPT="
-        $HOST:$DIR$GIT
-        %# "
+    PROMPT="
+$HOST:$DIR$GIT
+%# "
 }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:"
