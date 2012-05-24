@@ -21,4 +21,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-source /home/greeneca/.oh-my-zsh/themes/charlie.zsh-theme-aliases
+source ~/.oh-my-zsh/themes/charlie.zsh-theme-aliases
