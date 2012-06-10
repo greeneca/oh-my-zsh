@@ -14,7 +14,13 @@ alias st='git st'
 alias lg='git lg'
 alias ci='git commit -m'
 alias co='git checkout'
+alias br='git branch'
+alias gk='gitk --all'
 alias xclip='xclip -selection c'
 alias src='source ~/.zshrc'
 alias bi='bundle install'
 alias tf='tmuxifier'
+
+# minecraft aliases
+alias mc='java -Xmx1024M -Xms512M -cp ~/Games/minecraft/Minecraft.jar net.minecraft.LauncherFrame'
+alias mcs='cd ~/Games/minecraft_server;java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui;cd -'
