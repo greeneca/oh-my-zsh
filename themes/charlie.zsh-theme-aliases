@@ -11,7 +11,10 @@ alias untar='tar xvfz'
 alias task='ps auwx | grep -v grep | grep'
 alias xclip='xclip -selection c'
 alias src='source ~/.zshrc'
+
+#tmux aliases
 alias tf='tmuxifier'
+alias ta='tmux attach -t '
 
 # git aliases
 alias a.='git add .'
