@@ -23,8 +23,12 @@ _within-bundled-project() {
   false
 }
 
+_bundle-includes() {
+    bundle list | grep " $1 " &>/dev/null
+}
+
 _run-with-bundler() {
-  if _bundler-installed && _within-bundled-project; then
+  if _bundler-installed && _within-bundled-project && _bundle-includes $1; then
     bundle exec $@
   else
     $@
