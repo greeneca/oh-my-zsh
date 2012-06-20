@@ -39,3 +39,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/home/greeneca/bin:/home/greeneca/.tmuxifier/bin:/home/greeneca/.rvm/gems/ruby-1.9.3-p194/bin:/home/greeneca/.rvm/gems/ruby-1.9.3-p194@global/bin:/home/greeneca/.rvm/rubies/ruby-1.9.3-p194/bin:/home/greeneca/.rvm/bin:/home/greeneca/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/greeneca/scripts:./:/usr/lib/jvm/java-6-openjdk:/home/greeneca/.rvm/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
+
