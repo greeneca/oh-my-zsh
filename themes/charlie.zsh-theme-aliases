@@ -20,6 +20,7 @@ alias tl='tmux list-sessions'
 
 # git aliases
 alias a.='git add .'
+alias au='git add -u'
 alias st='git st'
 alias lg='git lg'
 alias ci='git commit -m'
