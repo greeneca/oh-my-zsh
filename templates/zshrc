@@ -40,5 +40,7 @@ export PATH=/home/greeneca/bin:/home/greeneca/.tmuxifier/bin:/home/greeneca/.rvm
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+source "$HOME/.rvm/scripts/rvm"
+
 [[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
 
