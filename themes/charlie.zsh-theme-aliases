@@ -11,6 +11,8 @@ alias untar='tar xvfz'
 alias task='ps auwx | grep -v grep | grep'
 alias xclip='xclip -selection c'
 alias src='source ~/.zshrc'
+alias cs='cd $COLIBRI'
+
 alias sites='nmap -p 1234,2345,3456,4567,5678,6789,9999 localhost'
 
 #tmux aliases
@@ -30,6 +32,7 @@ alias br='git branch'
 alias pl='git pull'
 alias pu='git push'
 alias gd='git diff'
+alias fa='git fetch --all'
 alias gk='gitk --all &'
 
 # ruby aliases
