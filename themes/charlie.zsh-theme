@@ -21,4 +21,6 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+COLIBRI=$HOME/colibri
+
 source ~/.oh-my-zsh/themes/charlie.zsh-theme-aliases
