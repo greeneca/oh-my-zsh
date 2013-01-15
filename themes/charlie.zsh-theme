@@ -1,6 +1,6 @@
 function precmd()
 {
-  HOST='%{$fg[blue]%}$(whoami)%{$fg[green]%}@%{$fg[blue]%}$(hostname -s)(%{$fg[yellow]%}$(date +%H:%M)%{$fg[blue]%})'
+  HOST='%{$FG[081]%}$(whoami)%{$fg[green]%}@%{$FG[081]%}$(hostname -s)(%{$fg[yellow]%}$(date +%H:%M)%{$FG[081]%})'
     DIR='%{$fg[red]%}%~%{$reset_color%}'
     RVM='%{$fg[yellow]%}$(rvm current)%{$reset_color%}'
 
