@@ -24,7 +24,7 @@ alias tl='tmux list-sessions'
 alias a.='git add .'
 alias au='git add -u'
 alias ap='git add -p'
-alias st='git status'
+alias st='git status -sd'
 alias lg="git log --graph --pretty=format:':%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias ci='git commit -m'
 alias co='git checkout'
@@ -32,8 +32,14 @@ alias br='git branch'
 alias pl='git pull'
 alias pu='git push'
 alias gd='git diff'
+alias ds='git diff --staging'
 alias fa='git fetch --all'
 alias gk='gitk --all &'
+alias am='git commit --amend'
+alias re='git remote -v'
+alias undo='git reset --soft HEAD^'
+alias gwho='git shortlog -s --'
+alias standup="git log --since '1 day ago' --oneline --author greeneca@gmail.com"
 
 # ruby aliases
 alias bi='bundle install'
