@@ -48,3 +48,5 @@ alias be='bundle exec'
 # minecraft aliases
 alias mc='java -Xmx1024M -Xms512M -cp ~/Games/minecraft/Minecraft.jar net.minecraft.LauncherFrame'
 alias mcs='cd ~/Games/minecraft_server;java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui;cd -'
+
+alias ksp='~/Dropbox/KSP/KSP.x86_64'
