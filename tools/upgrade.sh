@@ -1,8 +1,12 @@
 current_path=`pwd`
+current_path=${current_path/ /\\ }
 printf '\033[0;34m%s\033[0m\n' "Upgrading Oh My Zsh"
-cd $ZSH
+cd "$ZSH"
 
-if git pull origin master
+if git pull origin master &&
+    git fetch upstream master &&
+    git merge upstream/master &&
+    git push origin master
 then
   printf '\033[0;32m%s\033[0m\n' '         __                                     __   '
   printf '\033[0;32m%s\033[0m\n' '  ____  / /_     ____ ___  __  __   ____  _____/ /_  '
@@ -13,7 +17,7 @@ then
   printf '\033[0;34m%s\033[0m\n' 'Hooray! Oh My Zsh has been updated and/or is at the current version.'
   printf '\033[0;34m%s\033[1m%s\033[0m\n' 'To keep up on the latest, be sure to follow Oh My Zsh on twitter: ' 'http://twitter.com/ohmyzsh'
 else
-  printf '\033[0;31m%s\033[0m\n' 'There was an error updating. Try again later?'
+  printf '\033[0;31m%s\033[0m\n' "There was an error updating. Please look in ${ZSH}"
 fi
 
 cd "$current_path"
