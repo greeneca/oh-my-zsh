@@ -1,3 +1,6 @@
+#! /bin/zsh
+
+#system
 alias ll='ls -lF'
 alias la='ls -Al'
 alias l='ls -CF'
@@ -6,12 +9,23 @@ alias poof='clear'
 alias boom='exit'
 alias restart='sudo shutdown -r now'
 alias shutdown='sudo shutdown now'
-alias go='gnome-open'
 alias untar='tar xvfz'
-alias task='ps auwx | grep -v grep | grep'
+alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
 alias xclip='xclip -selection c'
 alias src='source ~/.zshrc'
 alias cs='cd $COLIBRI'
+alias ap='sudo aptitude'
+alias apup='ap update && ap upgrade'
+alias cp='cp --preserve=mode,timestamps'
+
+function go()
+{
+  for file in "$@"
+  do
+    gnome-open "$file"
+  done
+}
+
 
 alias sites='nmap -p 1234,2345,3456,4567,5678,6789,9999 localhost'
 
@@ -44,6 +58,24 @@ alias standup="git log --since '1 day ago' --oneline --author greeneca@gmail.com
 # ruby aliases
 alias bi='bundle install'
 alias be='bundle exec'
+
+# heroku aliases
+alias hl='heroku logs --tail'
+alias hc='heroku console'
+
+# Rails
+
+function findroot()
+{
+  while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+  do
+    cd ..
+  done
+
+  [ `pwd` != '/' ] && pwd
+}
+
+alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
 
 # minecraft aliases
 alias mc='java -Xmx1024M -Xms512M -cp ~/Games/minecraft/Minecraft.jar net.minecraft.LauncherFrame'

@@ -15,9 +15,12 @@ source $ZSH/oh-my-zsh.sh
 #Tmuxifier
 [[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
 
-#Path
-export PATH=$PATH:$HOME/.custom_scripts:$HOME/bin:$HOME/scripts
-
 #History
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
+
+#ENV
+export EDITOR=vim
+export PAGER=less
+export PATH=$PATH:$HOME/.custom_scripts:$HOME/bin:$HOME/scripts
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
