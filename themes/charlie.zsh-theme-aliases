@@ -14,8 +14,8 @@ alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
 alias xclip='xclip -selection c'
 alias src='source ~/.zshrc'
 alias cs='cd $COLIBRI'
-alias ap='sudo aptitude'
-alias apup='ap update && ap upgrade'
+alias apt='sudo aptitude'
+alias aptup='ap update && ap upgrade'
 alias cp='cp --preserve=mode,timestamps'
 
 function go()
