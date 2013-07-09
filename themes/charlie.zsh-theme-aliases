@@ -17,6 +17,7 @@ alias cs='cd $COLIBRI'
 alias apt='sudo aptitude'
 alias aptup='ap update && ap upgrade'
 alias cp='cp --preserve=mode,timestamps'
+alias ipa='ip addr list | grep eth\[0-9\]$'
 
 function go()
 {
