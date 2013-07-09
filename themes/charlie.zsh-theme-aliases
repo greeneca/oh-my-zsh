@@ -39,7 +39,7 @@ alias tl='tmux list-sessions'
 alias a.='git add .'
 alias au='git add -u'
 alias ap='git add -p'
-alias st='git status -sb'
+alias st='git status -s'
 alias lg="git log --graph --pretty=format:':%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias ci='git commit -m'
 alias co='git checkout'
