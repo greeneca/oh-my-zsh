@@ -43,6 +43,10 @@ function build()
   gem=$(gem build $gemspec | grep File | awk '{print $2}')
   echo "Pushing gem $gem";
   gem inabox $gem
+  success=$?
+  if [ $success != 0 ]; then
+    return 1;
+  fi
   version=$(echo $gem | cut -d '-' -f 2)
   tag=`echo "${version%.*}"`
   echo "Tagging repo $tag"
