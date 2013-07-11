@@ -27,6 +27,29 @@ function go()
   done
 }
 
+function build()
+{
+  count=$(git show --pretty="format:" --name-only | grep version.rb | wc -l)
+  if [ $count = 0 ]; then
+    echo "No version change in last commit";
+    return 1
+  fi
+  gemspec=$(ls -1 | grep gemspec)
+  if [[ $gemspec == "" ]]; then
+    echo "No gemspec found";
+    return 1;
+  fi
+  echo "Building gem from $gemspec"
+  gem=$(gem build $gemspec | grep File | awk '{print $2}')
+  echo "Pushing gem $gem";
+  gem inabox $gem
+  version=$(echo $gem | cut -d '-' -f 2)
+  tag=`echo "${version%.*}"`
+  echo "Tagging repo $tag"
+  git tag $tag
+  git push --tags
+}
+
 
 alias sites='nmap -p 1234,2345,3456,4567,5678,6789,9999 localhost'
 
