@@ -10,7 +10,7 @@ plugins=(git bundler gem heroku rails3 rvm tmux)
 source $ZSH/oh-my-zsh.sh
 
 #RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 #Tmuxifier
 [[ -s "$HOME/.tmuxifier/init.sh" ]] && source "$HOME/.tmuxifier/init.sh"
@@ -23,7 +23,10 @@ bindkey '\e[B' history-beginning-search-forward
 export EDITOR=vim
 export PAGER=less
 export PATH=$PATH:$HOME/.custom_scripts:$HOME/bin:$HOME/scripts
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$PATH:/user/local/rvm/bin # Add RVM to PATH for scripting
 
 # Broadcast
 if [ $SSH_CONNECTION ]; then; echo "Bow before me, for I am root." | wall; fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

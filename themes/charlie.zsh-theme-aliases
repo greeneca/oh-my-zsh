@@ -48,10 +48,14 @@ function build()
     return 1;
   fi
   version=$(echo $gem | cut -d '-' -f 2)
-  tag=`echo "${version%.*}"`
+  if [[ $# != 0 ]]; then
+    tag=`echo "$1_${version%.*}"`
+  else
+    tag=`echo "${version%.*}"`
+  fi
   echo "Tagging repo $tag"
   git tag $tag
-  git push --tags
+  git push origin $tag
 }
 
 
