@@ -68,8 +68,6 @@ function build()
 }
 
 
-alias sites='nmap -p 1234,2345,3456,4567,5678,6789,9999 localhost'
-
 #tmux aliases
 alias tf='tmuxifier'
 alias ta='tmux attach -t '
@@ -120,8 +118,6 @@ alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
 alias runner='sudo su rails_runner'
 alias apps='sudo su rails_apps'
 
-# minecraft aliases
-alias mc='java -Xmx1024M -Xms512M -cp ~/Games/minecraft/Minecraft.jar net.minecraft.LauncherFrame'
-alias mcs='cd ~/Games/minecraft_server;java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui;cd -'
-
+# Game aliases
+alias mc='~/Games/minecraft/Minecraft.jar'
 alias ksp='~/Dropbox/KSP/KSP.x86_64'
